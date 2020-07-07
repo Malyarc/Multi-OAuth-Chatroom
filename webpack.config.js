@@ -7,7 +7,6 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/
   },
-  mode: "development",
   entry: `${SRC_DIR}/app.jsx`,
   output: {
     path: DIST_DIR,
@@ -32,6 +31,17 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: false,
+            },
+          },
         ],
       }
     ]

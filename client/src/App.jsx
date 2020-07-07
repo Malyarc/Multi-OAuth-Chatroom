@@ -6,6 +6,8 @@ import UserProvider from "./contexts/UserProvider.jsx";
 import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile.jsx";
 import MenuBar from "./components/menus/MenuBar.jsx";
+import "./style/index.css";
+
 
 
 const App = () => {
